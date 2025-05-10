@@ -1,0 +1,43 @@
+html,body{
+    height:100%;
+    width:100%;
+    border-color: black;
+    margin-right: 2px;;
+}
+.button{
+ padding:20px;
+ width:70px;
+ margin:0 3px;
+ border: 2px solid black;
+ border-radius:9px; 
+ cursor:pointer;
+ text-align: center;
+ font-size: 25px;
+ margin-bottom: 3px;
+ font-weight: bold;
+
+}
+.button:hover{
+    background-color: rgb(84, 81, 81);
+    color:rgb(247, 247, 247);
+    text-shadow: 1cap;
+   font-weight:bold;
+   
+}
+.row{
+    text-align: center;
+    margin:8px
+
+}
+.row input{
+    margin:3px ;
+    padding:1px;
+    height: 10vh;
+     width:40vh;
+     border-radius: 9px;
+     border-width: 3px;
+     border-color: #9acfea;
+     font-size: 20px;
+     font-weight: bold;
+
+}
