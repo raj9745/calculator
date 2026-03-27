@@ -1,43 +1,95 @@
-html,body{
-    height:100%;
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+body{
     width:100%;
-    border-color: black;
-    margin-right: 2px;;
-}
-.button{
- padding:20px;
- width:70px;
- margin:0 3px;
- border: 2px solid black;
- border-radius:9px; 
- cursor:pointer;
- text-align: center;
- font-size: 25px;
- margin-bottom: 3px;
- font-weight: bold;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a0a0a;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
 
 }
-.button:hover{
-    background-color: rgb(84, 81, 81);
-    color:rgb(247, 247, 247);
-    text-shadow: 1cap;
-   font-weight:bold;
+.calculator{
+    border: 2px solid white;
+    padding: 22px;
+    border-radius: 10px;
+    width: min(360px, 92vw);
+    background:transparent;
+    box-shadow: 0px 3px 15px rgba(113,115,119,0.5);
+
+}
+input{
+    width:100%;
+    display:block;
+    border:none;
+    background: transparent;
+    margin:10px auto;
+    box-shadow: 0px 3px 15px rgba(84,84,84,0.1); 
+    font-size: 26px;
+    text-align: right;
+    cursor:pointer;
+    padding: 13px;
+    color:#f2f2f3
    
+    
 }
-.row{
-    text-align: center;
-    margin:8px
+
+input::placeholder{
+    color:#ffff;
+    left:8px;
+    top:8px;
+}
+
+.keys{
+    margin-top: 14px;
+}
+
+.keys > div{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.keys > div:last-child{
+    margin-bottom: 0;
+}
+
+button{
+    border: none;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    border-radius: 2px;
+    background: transparent;
+    color: #f2f2f3;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+    font-size: 23px;
+    font-weight: 500;
+    cursor: pointer;
+     border-radius: 50%;
 
 }
-.row input{
-    margin:3px ;
-    padding:1px;
-    height: 10vh;
-     width:40vh;
-     border-radius: 9px;
-     border-width: 3px;
-     border-color: #9acfea;
-     font-size: 20px;
-     font-weight: bold;
 
+button:hover{
+    background: #ffffff;
+    color:#0a0a0a
+}
+.operatorbtn{
+    color:greenyellow
+}
+
+.equalbtn{
+    background: #0a0a0a;
+    color: #f2f2f3;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
 }
