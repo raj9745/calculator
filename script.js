@@ -1,40 +1,39 @@
+const input = document.getElementById('display');
 
-function calculatePercentage(str){
-    try{
-        let value = eval(str);
-        return value? value/100:'';
-    } catch{return ''
-        
-    }
-}
+const buttons = document.querySelectorAll('button');
 
+let string = '';
+let arr = Array.from(buttons);
+arr.forEach(button =>{
+    button.addEventListener('click',()=>{
+        // 
+        if(button.innerHTML === '='){
 
+            string= eval(string);
+            input.value = string;
+            console.log(string);
+            
+        }
+//   if button clicked on AC it returns all the value to 0
+        else if(button.innerHTML === 'AC'){
+            
+            string = '';
+            console.log(string)
+            input.value = string;
+            // console.log('the button make 0',string)
+        }
+        //  if we clicked on DEL it will delete the last value of the string
+        else if(button.innerHTML === 'DEL'){
+            string = string.slice(0,-1);
+            console.log(string)
+            input.value = string;
+        }
+//  if we click on any other button it will add the value of that button to the string and show it in the input field
+        else{
+        string += button.innerHTML;
+        input.value =  string;
+        console.log(string);
+    }
 
-let string = "";
-let buttons = document.querySelectorAll('.button');
-Array.from(buttons).forEach((button)=> {
-button.addEventListener('click',(e)=>{
-    if(e.target.innerHTML == '='){
-        string = eval(string);
-        document.querySelector('input').value = string
-    }
-    else if(e.target.innerHTML == 'C'){
-        string = ''
-        document.querySelector('input').value = string
-    }
-    else if(e.target.innerHTML == '⌫'){
-        string = string.slice(0,-1);
-        document.querySelector('input').value = string;
-    }
-      else if(e.target.innerHTML == '%'){
-        // string = calculatePercentage(string);
-         string = string.replace(/(\d+(\.\d+)?)(?!.*\d)/, (match) => (parseFloat(match) / 100));
-        document.querySelector('input').value = string;
-    }
-    else{
-console.log(e.target);
-string += e.target.innerHTML;
-document.querySelector('input').value = string;
-    }
-})
-})
+    })
+});
