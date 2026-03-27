@@ -36,4 +36,8 @@ arr.forEach(button =>{
     }
 
     })
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 9440c4425e96712fdf6b9f3af07f4d42b8ad4e5d
